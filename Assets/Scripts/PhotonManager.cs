@@ -43,12 +43,12 @@ public class PhotonManager : Photon.MonoBehaviour {
 	// ルーム入室した時
 	void OnJoinedRoom() {
 		Debug.Log ("PhotonManager OnJoinedRoom");
-		GameObject cube = PhotonNetwork.Instantiate ("Cube", new Vector3 (0.0f, 0.0f, 0.0f),
+		GameObject cube = PhotonNetwork.Instantiate ("Cube", new Vector3 (Random.Range(-2.0f, 2.0f), 0.0f, 0.0f),
 			Quaternion.Euler(Vector3.zero),0);
 		cube.name = "Cube"+cube.GetComponent<PhotonView>().ownerId;
 
 
-		GameObject member = PhotonNetwork.Instantiate ("Member", new Vector3 (0.0f, 0.0f, 0.0f),
+		GameObject member = PhotonNetwork.Instantiate ("Member", new Vector3 (Random.Range(-2.0f, 2.0f), 0.0f, 0.0f),
 			Quaternion.Euler(Vector3.zero),0);
 		member.name = "Member"+cube.GetComponent<PhotonView>().ownerId;
 

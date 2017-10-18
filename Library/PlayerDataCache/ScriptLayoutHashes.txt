@@ -152,6 +152,7 @@ e626bae268f8b272b7a2d07760d262c6 Assembly-CSharp.dll:.PickupController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CubeLerp
 9650139907be6d63bf3c3eaa8900f13f Assembly-CSharp.dll:.myThirdPersonController
 362c847978adb9cef4966ca1c5403c2b Assembly-CSharp.dll:.MoveCam
+30e864f6ed9d89a6a74286d67ea0895d Assembly-CSharp.dll:.MemberScript
 4ce2b1853c9a392b036a6a654be90ccb Assembly-CSharp.dll:.OnClickInstantiate
 a7a85e3660316548e6df72942099a49d Assembly-CSharp.dll:.MessageOverlay
 4efe297689455799fab987dfaf7ba0d5 Assembly-CSharp.dll:.OnClickLoadSomething
@@ -240,4 +241,3 @@ b2dc25029b6f083ffbbdf9df269f825a Assembly-CSharp.dll:.InRoomChat
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ClickDetector
 54a26a95db9c623b6eb6fc01ae3ef891 Assembly-CSharp.dll:.CubeExtra
 620b217af0a878ae677c3b2b96fd07d0 Assembly-CSharp.dll:.CubeScript
-30e864f6ed9d89a6a74286d67ea0895d Assembly-CSharp.dll:.MemberScript
