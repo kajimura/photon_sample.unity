@@ -23,10 +23,10 @@ public class MemberScript : Photon.MonoBehaviour {
 		if (GetComponent<PhotonView> ().isMine) {
 			GetComponent<Renderer> ().material.color = Color.red;
 		}
-		GameObject obj = GameObject.Find ("/Canvas/Button");
-		if (GetComponent<PhotonView> ().isMine) {
-			obj.GetComponent<Button> ().onClick.AddListener (OnClick);
-		}
+		SetNameText ();
+	}
+	public void SetPlayerName(string name) {
+		str = name;
 		SetNameText ();
 	}
 	void OnMouseDrag()
@@ -43,14 +43,6 @@ public class MemberScript : Photon.MonoBehaviour {
 			mousePointInWorld.z = this.transform.position.z;
 			this.transform.position = mousePointInWorld;
 		}
-	}
-	void OnClick()
-	{
-		if (GetComponent<PhotonView> ().isMine) {
-			GameObject objstr = GameObject.Find ("/Canvas/InputField/Text");
-			str = objstr.transform.GetComponent<Text> ().text;
-		}
-		SetNameText ();
 	}
 	void SetNameText()
 	{

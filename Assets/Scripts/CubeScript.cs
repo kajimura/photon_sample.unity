@@ -6,23 +6,15 @@ using System;
 
 public class CubeScript : Photon.MonoBehaviour {
 	public string str = "guest";
-	public int hensu1 = 0;
-	public float hensu2 = 0f;
-	/*
-	void Start () {
-	}
-	void Update () {
-	}
-	*/
 	void Awake() {
 		this.name = "Cube"+GetComponent<PhotonView> ().ownerId;
 		if (GetComponent<PhotonView> ().isMine) {
 			GetComponent<Renderer> ().material.color = Color.red;
 		}
-		GameObject obj = GameObject.Find ("/Canvas/Button");
-		if (GetComponent<PhotonView> ().isMine) {
-			obj.GetComponent<Button> ().onClick.AddListener (OnClick);
-		}
+		SetCubeText ();
+	}
+	public void SetPlayerName(string name) {
+		str = name;
 		SetCubeText ();
 	}
 	void OnMouseDrag()
@@ -70,8 +62,6 @@ public class CubeScript : Photon.MonoBehaviour {
 			Debug.Log ("cube isread="+str);
 			//データの受信
 			this.str = (string)stream.ReceiveNext();
-			//this.hensu1 = (int)stream.ReceiveNext();
-			//this.hensu2 = (float)stream.ReceiveNext();
 			SetCubeText ();
 
 		}

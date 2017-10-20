@@ -197,7 +197,7 @@ ea580b2edab741d1d6e6445b14097645 Assembly-CSharp.dll:.RPGCamera
 5f2ad81aa8994e8fbe25d1e57afe6773 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 cb9b23bb8d8552626640cca26addf6f1 Assembly-CSharp.dll:.FriendItem
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PhotonManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LobbyScript
 abe32a93cd37b12375c9475f8f38bec3 Assembly-CSharp.dll:.PunTurnManager
 9cb24d80f90c6c239d5304446a0d7f3e Assembly-CSharp.dll:.CubeInter
 c0b17230605b48ee2c8fdf6ad9d187ec Assembly-CSharp.dll:ExitGames.Demos.DemoAnimator.CameraWork
@@ -241,3 +241,5 @@ b2dc25029b6f083ffbbdf9df269f825a Assembly-CSharp.dll:.InRoomChat
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ClickDetector
 54a26a95db9c623b6eb6fc01ae3ef891 Assembly-CSharp.dll:.CubeExtra
 620b217af0a878ae677c3b2b96fd07d0 Assembly-CSharp.dll:.CubeScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RoomScript
+fd34544fc29b875dbd527d14e2b3bf1e Assembly-CSharp.dll:.PhotonManager

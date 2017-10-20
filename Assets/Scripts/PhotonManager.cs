@@ -1,21 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class PhotonManager : Photon.MonoBehaviour {
-	// Use this for initialization
-	void Start () {
+
+	private static PhotonManager mInstance;
+	public bool lobbyFlag = true;
+
+	private PhotonManager () {
+	}
+	public static PhotonManager Instance {
+		get {
+			if (mInstance == null) {
+				GameObject go = new GameObject("PhotonManager");
+				mInstance = go.AddComponent<PhotonManager>();
+			}
+			return mInstance;
+		}
+	}
+	public void Start () {
 		PhotonNetwork.ConnectUsingSettings("v7.0");
 	}
-	// Update is called once per frame
 	void Update () {
-		
 	}
 	void OnJoinedLobby ()
 	{
 		Debug.Log ("PhotonManager OnJoinedLobby");
-		CreateRoom ();
+		lobbyFlag = true;
 	}
-	public void CreateRoom(){
+	public void SetPlayerName(string name) {
+		PhotonNetwork.playerName = name;
+	}
+	public string GetPlayerName() {
+		return PhotonNetwork.playerName;
+	}
+	public void CreateRoom() {
 		string userName = "ユーザ4";
 		string userId = "user4";
 		string roomId = "room1";
@@ -46,12 +65,12 @@ public class PhotonManager : Photon.MonoBehaviour {
 		GameObject cube = PhotonNetwork.Instantiate ("Cube", new Vector3 (Random.Range(-2.0f, 2.0f), 0.0f, 0.0f),
 			Quaternion.Euler(Vector3.zero),0);
 		cube.name = "Cube"+cube.GetComponent<PhotonView>().ownerId;
-
+		cube.GetComponent<CubeScript>().SetPlayerName(PhotonNetwork.playerName);
 
 		GameObject member = PhotonNetwork.Instantiate ("Member", new Vector3 (Random.Range(-2.0f, 2.0f), 0.0f, 0.0f),
 			Quaternion.Euler(Vector3.zero),0);
 		member.name = "Member"+cube.GetComponent<PhotonView>().ownerId;
-
+		member.GetComponent<MemberScript>().SetPlayerName(PhotonNetwork.playerName);
 	}
 	// ルーム一覧が取れた場合
 	void OnReceivedRoomListUpdate(){

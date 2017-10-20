@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{52FFDAFD-EC0D-68C9-A9C0-B97B5EEBB0CC}</ProjectGuid>
+    <ProjectGuid>{D4BFA40A-B34E-6AB9-CBAA-BD70EC408056}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -196,8 +196,10 @@
      <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
      <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
      <Compile Include="Assets\Scripts\CubeScript.cs" />
+     <Compile Include="Assets\Scripts\LobbyScript.cs" />
      <Compile Include="Assets\Scripts\MemberScript.cs" />
      <Compile Include="Assets\Scripts\PhotonManager.cs" />
+     <Compile Include="Assets\Scripts\RoomScript.cs" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
@@ -229,15 +231,15 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>/d/www/unity/photon/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>/d/www/unity/photon_sample.unity/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/d/www/unity/photon/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>/d/www/unity/photon_sample.unity/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{B3CC3B57-1FCB-07E5-595B-3F072151249D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{C6E77AAB-CCDD-9E1D-19A9-91CB45FE19EC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
