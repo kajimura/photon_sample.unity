@@ -57,7 +57,7 @@ public class MemberScript : Photon.MonoBehaviour {
 	void OnPhotonSerializeView( PhotonStream stream, PhotonMessageInfo info )
 	{
 		if (stream.isWriting) {
-			Debug.Log ("member isWriting="+str);
+			// Debug.Log ("member isWriting="+str);
 			//データの送信
 			stream.SendNext(str);
 			stream.SendNext(this.transform.position.x);

@@ -240,6 +240,7 @@ bd391be401e6d3724720058620cce6e5 Assembly-CSharp.dll:.ToHubButton
 b2dc25029b6f083ffbbdf9df269f825a Assembly-CSharp.dll:.InRoomChat
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ClickDetector
 54a26a95db9c623b6eb6fc01ae3ef891 Assembly-CSharp.dll:.CubeExtra
-620b217af0a878ae677c3b2b96fd07d0 Assembly-CSharp.dll:.CubeScript
+32ba2a11a583e0bd637640ffa912dc0c Assembly-CSharp.dll:.CubeScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RoomScript
 fd34544fc29b875dbd527d14e2b3bf1e Assembly-CSharp.dll:.PhotonManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TitleScript

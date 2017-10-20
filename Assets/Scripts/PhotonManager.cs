@@ -72,6 +72,27 @@ public class PhotonManager : Photon.MonoBehaviour {
 		member.name = "Member"+cube.GetComponent<PhotonView>().ownerId;
 		member.GetComponent<MemberScript>().SetPlayerName(PhotonNetwork.playerName);
 	}
+	// 自分以外が入室
+	public void OnPhotonPlayerConnected(PhotonPlayer player)
+	{
+		Debug.Log(player.name + " is joined.");
+		UpdateMemberList();
+	}
+
+	// 自分以外が退室
+	public void OnPhotonPlayerDisconnected(PhotonPlayer player)
+	{
+		Debug.Log(player.name + " is left.");
+		UpdateMemberList();
+	}
+
+	public void UpdateMemberList()
+	{
+		foreach (var p in PhotonNetwork.playerList)
+		{
+			Debug.Log("member="+p.name);
+		}
+	}
 	// ルーム一覧が取れた場合
 	void OnReceivedRoomListUpdate(){
 		RoomInfo[] rooms = PhotonNetwork.GetRoomList();

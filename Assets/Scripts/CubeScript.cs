@@ -52,7 +52,7 @@ public class CubeScript : Photon.MonoBehaviour {
 	void OnPhotonSerializeView( PhotonStream stream, PhotonMessageInfo info )
 	{
 		if (stream.isWriting) {
-			Debug.Log ("cube isWriting="+str);
+			// Debug.Log ("cube isWriting="+str);
 			//データの送信
 			stream.SendNext(str);
 			//stream.SendNext(hensu1);
