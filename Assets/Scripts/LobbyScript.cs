@@ -10,6 +10,7 @@ public class LobbyScript : MonoBehaviour {
 		manager = PhotonManager.Instance;
 		GameObject obj = GameObject.Find ("/Canvas/Button");
 		obj.GetComponent<Button> ().onClick.AddListener (OnClick);
+
 	}
 	// Update is called once per frame
 	void Update () {

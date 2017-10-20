@@ -10,9 +10,10 @@ public class TitleScript : MonoBehaviour {
 	void Start () {
 		manager = PhotonManager.Instance;
 		manager.Start ();
-
 		GameObject obj = GameObject.Find ("/Canvas/Button");
 		obj.GetComponent<Button> ().enabled = false;
+	}
+	void Awake() {
 	}
 	// Update is called once per frame
 	void Update () {
@@ -25,8 +26,11 @@ public class TitleScript : MonoBehaviour {
 	void OnClick()
 	{
 		Debug.Log ("OnClick");
-		GameObject objstr = GameObject.Find ("/Canvas/InputField/Text");
-		string str = objstr.transform.GetComponent<Text> ().text;
+		GameObject objtext = GameObject.Find ("/Canvas/InputField/Text");
+		string str = objtext.transform.GetComponent<Text> ().text;
+		if (str.Equals("")) {
+			str = "guest" + Random.Range (1000, 9999);
+		}
 		manager.SetPlayerName (str);
 		SceneManager.LoadScene ("LobbyScene");
 	}

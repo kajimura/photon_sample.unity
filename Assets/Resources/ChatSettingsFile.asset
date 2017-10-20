@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: ChatSettingsFile
   m_EditorClassIdentifier: 
   AppId: 
-  WizardDone: 0
+  WizardDone: 1
